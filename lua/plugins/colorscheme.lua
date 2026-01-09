@@ -3,7 +3,7 @@ return {
         "rebelot/kanagawa.nvim",
         name = "kanagawa",
         config = function()
-                         vim.cmd("colorscheme kanagawa")
+            vim.cmd("colorscheme kanagawa")
         end
     },
     {
@@ -12,7 +12,7 @@ return {
             lazy = false,
             priority = 1000,
             config = function()
-                --                 vim.cmd("colorscheme miasma")
+                -- vim.cmd("colorscheme miasma")
             end,
         }
     },
