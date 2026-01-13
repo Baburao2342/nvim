@@ -8,7 +8,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 
-vim.opt.inccommand = 'split'    -- live preview of substitute commands
+vim.opt.inccommand = 'nosplit'    -- live preview of substitute commands
+
+
 
 -- Highlight yanked text (Cannot understand the code but group = ... essentially makes a group and puts it inside that so reloading conifg 100x doesnt reload the command (ig))
 vim.api.nvim_create_autocmd('TextYankPost', {
