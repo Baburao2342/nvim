@@ -10,6 +10,9 @@ vim.opt.cursorline = true
 
 vim.opt.inccommand = 'nosplit'    -- live preview of substitute commands
 
+vim.opt.fillchars = {
+  eob = ' ',
+}
 
 
 -- Highlight yanked text (Cannot understand the code but group = ... essentially makes a group and puts it inside that so reloading conifg 100x doesnt reload the command (ig))
