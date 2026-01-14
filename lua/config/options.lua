@@ -26,7 +26,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.opt.wrap = false
 vim.opt.termguicolors = true
-
+vim.opt.scrolloff = 8
 
 vim.opt.runtimepath:prepend(vim.fn.stdpath('data') .. '/site')
 vim.opt.autowriteall = true  -- Auto-save before :next, :make, etc.
