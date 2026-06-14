@@ -13,7 +13,7 @@ Clone my dotfiles:
 git clone https://github.com/Natzukashi/nvim ~/.config/nvim
 ```
 
->[!warn]
+>[!Warning]
 >Remember to backup your existing configuration. Don't be a fool.
 
 Neovim is the GOAT.
