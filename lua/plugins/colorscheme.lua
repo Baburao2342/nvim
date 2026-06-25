@@ -1,15 +1,15 @@
 return {
   {
-    'rebelot/kanagawa.nvim',
+    'folke/tokyonight.nvim',
     priority = 1000,
     ---@diagnostic disable-next-line: missing-fields
     config = function()
-      require('kanagawa').setup {
+      require('tokyonight').setup {
         styles = {
           comments = { italic = true },
         },
       }
-      vim.cmd.colorscheme 'kanagawa'
+      vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
 

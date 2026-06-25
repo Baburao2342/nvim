@@ -1,14 +1,15 @@
 -- enable faster startup by caching compiled lua modules
 vim.loader.enable()
 
--- set <space> as the leader key
--- see `:help mapleader`
---  note: must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- set to true if you have a nerd font installed and selected in the terminal
 vim.g.have_nerd_font = true
+
+vim.o.wrap = false
+
+vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
+vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
+vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
+vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 vim.o.winborder = 'rounded'
 vim.o.fillchars = 'eob: ' -- remove the ~ at the end

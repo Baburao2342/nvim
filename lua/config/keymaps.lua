@@ -1,33 +1,39 @@
+print 'KEYMAPS LOADED'
 vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<cr>')
+
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.keymap.set('n', '<leader>e', function() require('oil').toggle_float() end, { desc = 'Toggle Oil float' })
 
 -- diagnostic config & keymaps
 --  see `:help vim.diagnostic.opts`
 vim.diagnostic.config {
-  update_in_insert = false,
-  severity_sort = true,
-  float = { border = 'rounded', source = 'if_many' },
-  underline = { severity = { min = vim.diagnostic.severity.warn } },
+    update_in_insert = false,
+    severity_sort = true,
+    float = { border = 'rounded', source = 'if_many' },
+    underline = { severity = { min = vim.diagnostic.severity.warn } },
 
-  -- can switch between these as you prefer
-  virtual_text = true, -- text shows up at the end of the line
-  virtual_lines = false, -- text shows up underneath the line, with virtual lines
+    -- can switch between these as you prefer
+    virtual_text = true, -- text shows up at the end of the line
+    virtual_lines = false, -- text shows up underneath the line, with virtual lines
 
-  -- auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
-  jump = {
-    on_jump = function(_, bufnr)
-      vim.diagnostic.open_float {
-        bufnr = bufnr,
-        scope = 'cursor',
-        focus = false,
-      }
-    end,
-  },
+    -- auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
+    jump = {
+        on_jump = function(_, bufnr)
+            vim.diagnostic.open_float {
+                bufnr = bufnr,
+                scope = 'cursor',
+                focus = false,
+            }
+        end,
+    },
 }
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'open diagnostic [q]uickfix list' })
 
-
 vim.keymap.set({ 'n', 'v' }, '<leader>f', function() require('conform').format { async = true } end, { desc = '[f]ormat buffer' })
+
 -- exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. otherwise, you normally need to press <c-\><c-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -64,7 +70,7 @@ vim.keymap.set('n', '<c-k>', '<c-w><c-k>', { desc = 'move focus to the upper win
 --  try it with `yap` in normal mode
 --  see `:help vim.hl.on_yank()`
 vim.api.nvim_create_autocmd('textyankpost', {
-  desc = 'highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function() vim.hl.on_yank() end,
+    desc = 'highlight when yanking (copying) text',
+    group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+    callback = function() vim.hl.on_yank() end,
 })
