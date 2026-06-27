@@ -40,6 +40,7 @@ vim.o.breakindent = true
 
 -- enable undo/redo changes even after closing and reopening a file
 vim.o.undofile = true
+vim.opt.undodir = vim.fn.stdpath 'state' .. '/undo'
 
 -- case-insensitive searching unless \c or one or more capital letters in the search term
 vim.o.ignorecase = true

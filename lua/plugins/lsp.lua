@@ -9,7 +9,7 @@ return {
     {
         'whoissethdaniel/mason-tool-installer.nvim',
         opts = {
-            ensure_installed = { 'clangd', 'lua_ls', 'stylua', 'pyright' },
+            ensure_installed = { 'clangd', 'lua_ls', 'stylua', 'basedpyright' },
         },
     },
 }

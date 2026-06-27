@@ -50,7 +50,7 @@ return {
                 documentation = { auto_show = true, auto_show_delay_ms = 500 },
             },
             sources = {
-                default = { 'lsp', 'path', 'snippets' },
+                default = { 'lsp', 'path', 'buffer' },
             },
             snippets = { preset = 'luasnip' },
             -- blink.cmp includes an optional, recommended rust fuzzy matcher,
