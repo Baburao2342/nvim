@@ -12,6 +12,11 @@ return {
     },
     {
         'rcarriga/nvim-notify',
-        config = function() vim.notify = require 'notify' end,
+        config = function()
+            require('notify').setup {
+                background_colour = '#000000',
+            }
+            vim.notify = require 'notify'
+        end,
     },
 }
