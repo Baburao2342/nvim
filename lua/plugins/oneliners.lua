@@ -10,13 +10,4 @@ return {
         -- use opts = {} for passing setup options
         -- this is equivalent to setup({}) function
     },
-    {
-        'rcarriga/nvim-notify',
-        config = function()
-            require('notify').setup {
-                background_colour = '#000000',
-            }
-            vim.notify = require 'notify'
-        end,
-    },
 }
