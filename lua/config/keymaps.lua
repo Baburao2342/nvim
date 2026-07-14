@@ -42,12 +42,6 @@ vim.keymap.set({ 'n', 'v' }, '<leader>f', function() require('conform').format {
 -- or just use <c-\><c-n> to exit terminal mode
 vim.keymap.set('t', '<esc><esc>', '<c-\\><c-n>', { desc = 'exit terminal mode' })
 
--- tip: disable arrow keys in normal mode
-vim.keymap.set('n', '<left>', '<cmd>echo "use h to move!!"<cr>')
-vim.keymap.set('n', '<right>', '<cmd>echo "use l to move!!"<cr>')
-vim.keymap.set('n', '<up>', '<cmd>echo "use k to move!!"<cr>')
-vim.keymap.set('n', '<down>', '<cmd>echo "use j to move!!"<cr>')
-
 -- keybinds to make split navigation easier.
 --  use ctrl+<hjkl> to switch between windows
 --
