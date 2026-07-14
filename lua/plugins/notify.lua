@@ -3,7 +3,7 @@ return {
     config = function()
         require('notify').setup {
             background_colour = '#000000',
-            timeout = 4000,
+            timeout = 1000,
         }
         vim.notify = require 'notify'
     end,
