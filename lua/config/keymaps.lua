@@ -6,6 +6,9 @@ vim.g.maplocalleader = ' '
 
 vim.keymap.set('n', '<leader>e', function() require('oil').toggle_float() end, { desc = 'Toggle Oil float' })
 
+-- Restart neovim
+vim.keymap.set('n', '<C-r>', '<cmd>:restart<cr>')
+
 -- diagnostic config & keymaps
 --  see `:help vim.diagnostic.opts`
 vim.diagnostic.config {
