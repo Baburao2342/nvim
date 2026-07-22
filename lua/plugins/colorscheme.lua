@@ -8,6 +8,10 @@ return {
                 styles = {
                     sidebars = 'transparent',
                     floats = 'transparent',
+                    comments = { bold = false, italic = true },
+                    keywords = { bold = false, italic = true },
+                    functions = { bold = true },
+                    variables = {},
                 },
             }
             vim.cmd.colorscheme 'tokyonight-moon'
