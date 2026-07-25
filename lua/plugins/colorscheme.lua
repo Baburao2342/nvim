@@ -1,21 +1,17 @@
 return {
     {
-        'folke/tokyonight.nvim',
-        name = 'tokyonight',
+        'oxfist/night-owl.nvim',
+        lazy = false,
+        priority = 1000,
         config = function()
-            require('tokyonight').setup {
-                transparent = true,
-                styles = {
-                    sidebars = 'transparent',
-                    floats = 'transparent',
-                    comments = { bold = false, italic = true },
-                    keywords = { bold = false, italic = true },
-                    functions = { bold = true },
-                    variables = {},
-                },
-            }
-            vim.cmd.colorscheme 'tokyonight-moon'
+            require('night-owl').setup()
+            vim.cmd.colorscheme 'night-owl'
         end,
+    },
+
+    {
+        'xiyaowong/transparent.nvim',
+        opts = {},
     },
 
     {
