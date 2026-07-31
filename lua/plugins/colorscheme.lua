@@ -1,12 +1,10 @@
 return {
     {
-        'oxfist/night-owl.nvim',
+        'shaunsingh/nord.nvim',
+        name = 'nord',
         lazy = false,
         priority = 1000,
-        config = function()
-            require('night-owl').setup()
-            vim.cmd.colorscheme 'night-owl'
-        end,
+        config = function() vim.cmd.colorscheme 'nord' end,
     },
 
     {
