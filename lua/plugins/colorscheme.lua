@@ -1,10 +1,9 @@
 return {
     {
-        'shaunsingh/nord.nvim',
-        name = 'nord',
+        'folke/tokyonight.nvim',
         lazy = false,
         priority = 1000,
-        config = function() vim.cmd.colorscheme 'nord' end,
+        config = function() vim.cmd.colorscheme 'tokyonight-night' end,
     },
 
     {
@@ -16,7 +15,11 @@ return {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         opts = {
-            options = { theme = 'auto' },
+            options = {
+                theme = 'auto',
+                section_separators = '',
+                component_separators = '',
+            },
         },
     },
 }
