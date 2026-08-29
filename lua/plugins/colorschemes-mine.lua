@@ -4,13 +4,16 @@ return {
     opts = {},
   },
   {
-    "navarasu/onedark.nvim",
-    priority = 1000,
+    "folke/tokyonight.nvim",
     config = function()
-      require("onedark").setup({
-        style = "dark",
+      require("tokyonight").setup({
+        transparent = true, -- Enable this to disable the background color
+        styles = {
+          sidebars = "transparent", -- Set sidebar background to transparent (e.g., nvim-tree)
+          floats = "transparent", -- Set floating windows to transparent
+        },
       })
-      require("onedark").load()
+      vim.cmd.colorscheme("tokyonight")
     end,
   },
 }
